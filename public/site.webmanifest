@@ -1,0 +1,33 @@
+{
+  "name": "Luminous Dental LV",
+  "short_name": "Luminous Dental",
+  "description": "Professional dental implants in Las Vegas. Restore your smile with our experienced team. Free consultation available.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "scope": "/",
+  "orientation": "portrait",
+  "categories": ["health", "dentist", "implants", "clinic"],
+  "id": "/",
+  "screenshots": [
+    {
+      "src": "/placeholder.svg?height=630&width=1200",
+      "sizes": "1200x630",
+      "type": "image/svg+xml"
+    }
+  ]
+}

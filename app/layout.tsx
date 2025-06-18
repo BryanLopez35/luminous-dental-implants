@@ -11,8 +11,23 @@ export const metadata: Metadata = {
   description:
     "Professional dental implants in Las Vegas. Restore your smile with our experienced team. Free consultation available. Call (725) 291-5588 today!",
   keywords:
-    "dental implants, Las Vegas dentist, tooth replacement, dental surgery, implant dentistry, Nevada dental care",
+    "dental implants, Las Vegas dentist, tooth replacement, dental surgery, implant dentistry, Nevada dental care, implantes dentales Las Vegas, dentista Las Vegas, cirugía dental, odontología Nevada",
   authors: [{ name: "Luminous Dental LV" }],
+  creator: "Luminous Dental LV",
+  publisher: "Luminous Dental LV",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://dentalimplants.luminousdentallv.com"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/",
+      "es-ES": "/es",
+    },
+  },
   openGraph: {
     title: "Dental Implants Las Vegas | Luminous Dental LV",
     description: "Professional dental implants in Las Vegas. Restore your smile with our experienced team.",
@@ -20,9 +35,9 @@ export const metadata: Metadata = {
     siteName: "Luminous Dental LV",
     images: [
       {
-        url: "/placeholder.svg?height=630&width=1200",
-        width: 1200,
-        height: 630,
+        url: "/web-app-manifest-512x512.png",
+        width: 512,
+        height: 512,
         alt: "Dental Implants Las Vegas - Luminous Dental LV",
       },
     ],
@@ -33,13 +48,17 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dental Implants Las Vegas | Luminous Dental LV",
     description: "Professional dental implants in Las Vegas. Free consultation available.",
-    images: ["/placeholder.svg?height=630&width=1200"],
+    images: ["/web-app-manifest-512x512.png"],
   },
-  alternates: {
-    canonical: "https://dentalimplants.luminousdentallv.com",
-    languages: {
-      "en-US": "https://dentalimplants.luminousdentallv.com",
-      "es-ES": "https://dentalimplants.luminousdentallv.com/es",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   other: {
@@ -48,7 +67,7 @@ export const metadata: Metadata = {
     "geo.position": "36.1699;-115.1398",
     ICBM: "36.1699, -115.1398",
   },
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -59,6 +78,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="canonical" href="https://dentalimplants.luminousdentallv.com" />
+        <link rel="alternate" hrefLang="en" href="https://dentalimplants.luminousdentallv.com/" />
+        <link rel="alternate" hrefLang="es" href="https://dentalimplants.luminousdentallv.com/es" />
+        <meta name="geo.region" content="US-NV" />
+        <meta name="geo.placename" content="Las Vegas" />
+        <meta name="geo.position" content="36.1699;-115.1398" />
+        <meta name="ICBM" content="36.1699, -115.1398" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -66,8 +93,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "DentalClinic",
               name: "Luminous Dental LV",
+              image: "https://dentalimplants.luminousdentallv.com/logo.png",
               description: "Professional dental implants and comprehensive dental care in Las Vegas",
-              url: "https://dentalimplants.luminousdentallv.com",
+              url: "https://dentalimplants.luminousdentallv.com/",
               telephone: "(725) 291-5588",
               email: "info@luminousdentallv.com",
               address: {
@@ -80,8 +108,8 @@ export default function RootLayout({
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: "36.1699",
-                longitude: "-115.1398",
+                latitude: 36.1699,
+                longitude: -115.1398,
               },
               openingHours: ["Mo-Fr 08:00-17:00", "Sa 09:00-15:00"],
               priceRange: "$$",
@@ -89,6 +117,21 @@ export default function RootLayout({
                 "@type": "AggregateRating",
                 ratingValue: "4.8",
                 reviewCount: "127",
+                itemReviewed: {
+                  "@type": "LocalBusiness",
+                  name: "Luminous Dental LV",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "1212 S Maryland Pkwy",
+                    addressLocality: "Las Vegas",
+                    addressRegion: "NV",
+                    postalCode: "89104",
+                    addressCountry: "US"
+                  },
+                  telephone: "(725) 291-5588",
+                  priceRange: "$$",
+                  image: "https://dentalimplants.luminousdentallv.com/logo.png"
+                }
               },
               medicalSpecialty: "Dentistry",
               availableService: [
@@ -103,6 +146,7 @@ export default function RootLayout({
                   description: "Secure dentures supported by dental implants",
                 },
               ],
+              inLanguage: ["en", "es"],
             }),
           }}
         />
