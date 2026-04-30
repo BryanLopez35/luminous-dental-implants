@@ -13,7 +13,7 @@ export default function Footer() {
   }
 
   const handlePhoneClick = () => {
-    window.location.href = "tel:+17252915588"
+    window.location.href = "tel:+17028058688"
   }
 
   const handleEmailClick = () => {
@@ -73,7 +73,7 @@ export default function Footer() {
                 className="border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-teal-700 transition-all duration-300 flex items-center space-x-3"
               >
                 <Phone className="w-6 h-6" />
-                <span>(725) 291-5588</span>
+                <span>(702) 805-8688</span>
               </button>
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function Footer() {
               >
                 <Phone className="w-6 h-6 text-sky-400 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="font-semibold text-white">(725) 291-5588</p>
+                  <p className="font-semibold text-white">(702) 805-8688</p>
                   <p className="text-sm text-gray-400">{t("footer.clickToCall")}</p>
                 </div>
               </button>

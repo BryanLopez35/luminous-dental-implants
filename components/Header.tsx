@@ -32,7 +32,7 @@ export default function Header() {
   }
 
   const handlePhoneClick = () => {
-    window.location.href = "tel:+17252915588"
+    window.location.href = "tel:+17028058688"
   }
 
   return (
@@ -51,7 +51,7 @@ export default function Header() {
           <div className="flex items-center space-x-6 text-gray-600">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4 text-sky-600" />
-              <span>(725) 291-5588</span>
+              <span>(702) 805-8688</span>
             </div>
             <div className="text-gray-400">|</div>
             <span>📍 Las Vegas, Nevada</span>
@@ -106,7 +106,7 @@ export default function Header() {
             >
               <Phone className="w-4 h-4" />
               <div className="text-left">
-                <div className="text-sm font-semibold">(725) 291-5588</div>
+                <div className="text-sm font-semibold">(702) 805-8688</div>
                 <div className="text-xs text-gray-500">{t("header.callNow")}</div>
               </div>
             </button>
@@ -141,7 +141,7 @@ export default function Header() {
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="font-bold text-gray-900">(725) 291-5588</div>
+                  <div className="font-bold text-gray-900">(702) 805-8688</div>
                   <div className="text-sm text-sky-600">{t("header.callForFreeConsultation")}</div>
                 </div>
               </button>
