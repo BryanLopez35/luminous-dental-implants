@@ -14,6 +14,7 @@ function ThankYouContent({ searchParams }: { searchParams: { id?: string } }) {
   const [copied, setCopied] = useState(false)
   const leadId = searchParams.id || "LUM-" + Math.random().toString(36).substr(2, 8).toUpperCase()
 
+  // Ensure the page starts at the top when loaded
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -197,7 +198,6 @@ function ThankYouContent({ searchParams }: { searchParams: { id?: string } }) {
           {/* Return Button */}
           <Link
             href="/"
-            onClick={() => window.scrollTo(0, 0)}
             className="inline-flex items-center space-x-3 bg-gradient-to-r from-sky-600 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-sky-700 hover:to-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
           >
             <span>{t("thankYou.return")}</span>

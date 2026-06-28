@@ -116,10 +116,10 @@ export async function POST(request: NextRequest) {
     const leadId = `LUM-${nanoid(8).toUpperCase()}`
 
     // Create transporter (you'll need to configure with your SMTP settings)
-    const transporter = nodemailer.createTransporter({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: Number.parseInt(process.env.SMTP_PORT || "587"),
-      secure: false,
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number.parseInt(process.env.SMTP_PORT || "465"),
+      secure: true,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,

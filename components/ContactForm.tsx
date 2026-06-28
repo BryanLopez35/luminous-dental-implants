@@ -2,12 +2,14 @@
 
 import type React from "react"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Phone, Mail, MapPin, Calendar, User, MessageSquare } from "lucide-react"
 import { useLanguage } from "@/contexts/LanguageContext"
 import ScrollAnimation from "./ui/scroll-animation"
 
 export default function ContactForm() {
   const { language, t } = useLanguage()
+  const router = useRouter()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,9 +34,8 @@ export default function ContactForm() {
 
       if (response.ok) {
         const result = await response.json()
-        // Scroll to top before navigation
-        window.scrollTo(0, 0)
-        window.location.href = `/thank-you?id=${result.leadId}`
+        // Use Next.js router for navigation instead of window.location.href
+        router.push(`/thank-you?id=${result.leadId}`)
       } else {
         alert(
           language === "es"
